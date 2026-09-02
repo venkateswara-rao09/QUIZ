@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuizQuest | Interactive Quiz</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-circle circle-one"></div>
+    <div class="background-circle circle-two"></div>
+
+    <main class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">✦</span>
+                QuizQuest
+            </div>
+
+            <div class="question-count">
+                Question <span id="currentQuestion">1</span>/<span id="totalQuestions">8</span>
+            </div>
+        </header>
+
+
+        <!-- PROGRESS -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+        </div>
+
+
+        <!-- QUIZ CARD -->
+        <section id="quizScreen" class="quiz-card">
+
+            <div class="question-type" id="questionType">
+                SINGLE CHOICE
+            </div>
+
+            <h1 id="question">
+                Loading question...
+            </h1>
+
+            <p id="instruction" class="instruction"></p>
+
+            <div id="answers" class="answers"></div>
+
+            <div id="feedback" class="feedback"></div>
+
+            <button id="nextBtn" class="next-btn">
+                Next Question →
+            </button>
+
+        </section>
+
+
+        <!-- RESULT SCREEN -->
+        <section id="resultScreen" class="result-card hidden">
+
+            <div class="trophy">🏆</div>
+
+            <p class="result-label">QUIZ COMPLETED!</p>
+
+            <h1>Great Job!</h1>
+
+            <p class="result-message">
+                You completed the quiz. Here's your final score.
+            </p>
+
+            <div class="score-circle">
+                <span id="finalScore">0</span>
+                <small>/ 8</small>
+            </div>
+
+            <p id="scoreMessage" class="score-message"></p>
+
+            <button id="restartBtn" class="next-btn">
+                Play Again ↻
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
